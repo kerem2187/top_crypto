@@ -1,0 +1,19 @@
+The code you provided is a Python script that fetches the daily top gainers from CoinMarketCap API and sends the list to a Telegram bot. It requires you to enter your CoinMarketCap API key and Telegram bot token to work correctly.
+
+Here's how the code works:
+1. It imports the necessary modules (`requests` for API requests and `telegram` for interacting with the Telegram bot).
+2. Defines two functions: `start` and `get_top_gainers`. The `start` function sends a welcome message when the user starts the bot, and the `get_top_gainers` function fetches the top gainers data from CoinMarketCap API and sends it as a response.
+3. In the `main` function, you need to set your CoinMarketCap API key and Telegram bot token as values for the variables `COINMARKETCAP_API_KEY` and `TOKEN`, respectively.
+4. The `Updater` class is used to create a new Telegram bot updater with the provided token.
+5. `CommandHandler` is used to associate the `/start` and `/topgainers` commands with their respective functions.
+6. `updater.start_polling()` starts the bot, and `updater.idle()` blocks the program from exiting until you manually stop the bot.
+
+To use this script, you need to replace `'YOUR_COINMARKETCAP_API_KEY'` and `'YOUR_TELEGRAM_BOT_TOKEN'` with your actual API key and bot token, respectively.
+
+Before running the script, make sure you have installed the required packages by running the following command in your terminal:
+
+```
+pip install python-telegram-bot requests
+```
+
+After setting your API key and bot token, you can run the script, and it will start the Telegram bot. You can then interact with the bot using the `/start` and `/topgainers` commands in the Telegram app or chat window. The bot will respond with the daily top gainers in the cryptocurrency market.
